@@ -174,14 +174,12 @@ def streamlit_query_interface(folder_name):
         query_features = standardized_using_standardizer(query_features)
         query_features = dict_to_feature_vector(query_features)
 
-
-        match neighbour_method:
-            case "ANN":
-                print("Using ANN")
-                a = most_similar_meshes_query_ANN(query_features,feature_matrix)
-            case "KNN":
-                print("Using KNN")
-                a = most_similar_meshes_query(query_features, feature_matrix, weights)
+        if(neighbour_method == "ANN"):
+            print("Using ANN")
+            a = most_similar_meshes_query_ANN(query_features,feature_matrix)
+        if(neighbour_method == "KNN"):
+            print("Using KNN")
+            a = most_similar_meshes_query(query_features, feature_matrix, weights)
         print(a)
         for dist, id in a:
             streamlit_show_mesh(st, f"m{id}.obj", dist, df[df['ID'] == id])
