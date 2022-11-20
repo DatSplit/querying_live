@@ -1,0 +1,1 @@
+https://git.science.uu.nl/s.nijboer/multimediaretrieval/-/blob/master/Datasets/Princeton/classification/v1/base/train.cla
