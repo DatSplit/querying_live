@@ -15,7 +15,7 @@ import time
 logging.basicConfig(level=logging.DEBUG,
                     format='(%(processName)s) %(message)s',)
 
-with open(r"C:\Users\niels\MR\INFOMR-Multimedia-Retrieval\labels\id_to_label_49.json", "rb") as file:
+with open(r"labels\id_to_label_49.json", "rb") as file:
     ID_TO_LABEL = json.load(file)
 
 
