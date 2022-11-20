@@ -67,8 +67,8 @@ def df_to_feature_matrix(dataframe):
 
 
 def streamlit_show_mesh(st, filename, dist, df_row):
-    print(f'meshes_raw\\{filename}')
-    msh = meshio.read(f'meshes_raw\\{filename}')
+    print(f'meshes_raw/{filename}')
+    msh = meshio.read(f'meshes_raw/{filename}')
     verts = msh.points
     I, J, K =  msh.cells_dict["triangle"].T
     x, y, z = verts.T
