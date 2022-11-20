@@ -176,10 +176,10 @@ def streamlit_query_interface(folder_name):
 
         if(neighbour_method == "ANN"):
             print("Using ANN")
-            a = most_similar_meshes_query_ANN(query_features,feature_matrix)
+            a = most_similar_meshes_query_ANN(query_features,feature_matrix, k)
         if(neighbour_method == "KNN"):
             print("Using KNN")
-            a = most_similar_meshes_query(query_features, feature_matrix, weights)
+            a = most_similar_meshes_query(query_features, feature_matrix, weights, k)
         print(a)
         for dist, id in a:
             streamlit_show_mesh(st, f"m{id}.obj", dist, df[df['ID'] == id])
