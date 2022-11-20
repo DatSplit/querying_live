@@ -135,7 +135,7 @@ def streamlit_query_interface(folder_name):
     import os
     st.title("3D Mesh Query")
     query_object = st.file_uploader(label='Upload mesh here')
-    df = pd.read_csv(fr"{folder_name}\df.csv", index_col=0)    
+    df = pd.read_csv(f"{folder_name}/df.csv", index_col=0)    
 
     feature_matrix = df_to_feature_matrix(df)
     
