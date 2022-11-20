@@ -1,5 +1,5 @@
 meshio==5.3.4
-numba==0.56.3
+numba==0.56.4
 numpy==1.23.3
 pandas==1.5.0
 plotly==5.10.0
