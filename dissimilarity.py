@@ -1,5 +1,5 @@
-from scipy.stats import wasserstein_distance
-from scipy.spatial.distance import cityblock,cosine
+#from scipy.stats import wasserstein_distance
+#from scipy.spatial.distance import cityblock,cosine
 import numpy as np
 from operator import itemgetter
 from utils import get_id_to_idx
