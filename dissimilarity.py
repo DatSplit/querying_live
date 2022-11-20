@@ -207,6 +207,7 @@ def most_similar_meshes_query(query_vector,feature_matrix,weights = [1,1,1,1,1,1
 def most_similar_meshes_query_ANN(query_vector, feature_matrix, k=5):    
     with open("run_18-11-2022/ANN_index.p", "rb") as file:
         index = pickle.load(file)
+    print(index)
     indexes, distances = index.query([query_vector])
     indexes = indexes[0]
     distances = distances[0]
